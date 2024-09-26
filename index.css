@@ -50,26 +50,30 @@ h2{
 }
 .date{
     position: absolute;
-    top: 25%;
+    top: 20%;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 .timer span{
     font-size: 2rem;
-    padding: 0.4rem;
+    padding: 0.5rem;
+    position: relative;
 }
 span::after{
     text-transform: capitalize;
     font-size: 1rem;
     bottom: -15px;
-    position: relative;
+    left: 5px;
+    position: absolute;
 }
 #da::after{
-    content: "date";
+    content: "d";
 }
 #mon::after{
-    content: "mon";
+    content: "m";
 }
 #year::after{
-    content: "year";
+    content: "y";
 }
 #hrs::after{
     content: "hrs";
@@ -89,13 +93,21 @@ span::after{
         width: 280px;
         height: 280px;
     }
+    .date{
+        position: absolute;
+        top: 20%;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }    
     .timer span{
         font-size: 1.2rem;
-        padding: 0.1rem;
+        padding: 0.2rem;
     }
     span::after{
+        text-transform: capitalize;
         font-size: 1rem;
-        bottom: -20px;
-        position: relative;
-    }    
+        bottom: -15px;
+        left: 5px;
+        position: absolute;
+    }
 }
