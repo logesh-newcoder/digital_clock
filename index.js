@@ -11,8 +11,8 @@ setInterval(()=>{
     let date=new Date();
     console.log(date);
 
-    da.innerHTML=date.getDate();
-    mon.innerHTML=date.getMonth();
+    da.innerHTML=(date.getDate()<10?"0":"")+date.getDate()+" / ";
+    mon.innerHTML=(date.getMonth()<10?"0":"")+date.getMonth()+" / ";
     year.innerHTML=date.getFullYear();
 
     hrs.innerHTML= (date.getHours()<10?"0":"") +date.getHours();
