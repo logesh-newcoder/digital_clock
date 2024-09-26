@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+h2{
+    height: 30%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.con{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    height: 380px;
+    background-color:cadetblue;
+    border: 5px solid goldenrod;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    border: 5px solid goldenrod;
+}
+.timer{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.date{
+    position: absolute;
+    top: 25%;
+}
+.timer span{
+    font-size: 2rem;
+    padding: 0.4rem;
+}
+span::after{
+    text-transform: capitalize;
+    font-size: 1rem;
+    bottom: -15px;
+    position: relative;
+}
+#da::after{
+    content: "date";
+}
+#mon::after{
+    content: "mon";
+}
+#year::after{
+    content: "year";
+}
+#hrs::after{
+    content: "hrs";
+}
+#min::after{
+    content: "min";
+}
+#sec::after{
+    content: "sec";
+}
+
+@media screen and (max-width:460px) {
+    h2{
+        font-size: 2rem;
+    }
+    .con{
+        width: 280px;
+        height: 280px;
+    }
+    .timer span{
+        font-size: 1.2rem;
+        padding: 0.2rem;
+    }
+    span::after{
+        font-size: 1rem;
+        bottom: -20px;
+        position: relative;
+    }    
+}
