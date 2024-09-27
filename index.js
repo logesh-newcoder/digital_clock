@@ -9,14 +9,18 @@ const year=document.getElementById("year");
 
 setInterval(()=>{
     let date=new Date();
-    console.log(date);
-
     da.innerHTML=(date.getDate()<10?"0":"")+date.getDate()+" / ";
-    mon.innerHTML=(date.getMonth()<10?"0":"")+date.getMonth()+" / ";
+    mon.innerHTML=(date.getMonth()+1<10?"0":"")+(date.getMonth()+1)+" / ";
     year.innerHTML=date.getFullYear();
 
-    hrs.innerHTML= (date.getHours()<10?"0":"") +date.getHours();
+    let hours = date.getHours();
+    let amPmText = hours >= 12 ? "pm" : "am";
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
+    hrs.innerHTML = (hours < 10 ? "0" : "") + hours;    
+    
     min.innerHTML= (date.getMinutes()<10?"0":"") +date.getMinutes();
     sec.innerHTML= (date.getSeconds()<10?"0":"") +date.getSeconds();
-    ampm.innerHTML= (date.getHours()<11?"pm":"am");
+    ampm.innerHTML= (date.getHours()<11?"am":"pm");
 },1000)
+
